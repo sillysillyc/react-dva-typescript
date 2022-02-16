@@ -15,4 +15,5 @@ const Home = () => {
 export default connect((state: ConnectStateI) => {
   const a = state.loading.effects['global/load'];
   console.log(a);
+  return {};
 })(Home);
