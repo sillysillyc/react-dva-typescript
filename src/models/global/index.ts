@@ -14,12 +14,13 @@ const globalModel: Model = {
   },
   effects: {
     *load() {
-      try {
-        console.log('load');
-        throw new Error('ffff');
-      } catch (error: any) {
-        message.error(error.message);
-      }
+      // 使用trycatch dva的 onError无法捕获错误
+      // try {
+      console.log('load');
+      // throw new Error('ffff');
+      // } catch (error: any) {
+      // message.error('----', error.message);
+      // }
     },
     *save({ payload: todo }, { put, call }) {
       // 调用 saveTodoToServer，成功后触发 `add` action 保存到 state

@@ -1,3 +1,4 @@
 import globalModel from './global';
+import homeModel from './home';
 
-export { globalModel };
+export { globalModel, homeModel };
